@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_movie_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cta.android.MovieDetail"
+    tools:showIn="@layout/activity_movie_detail">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/movie_deatil_pager_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/two_hundred_dp">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_pager_min_height"
+            android:id="@+id/movie_deatil_vp"/>
+
+        <com.cta.utility.CirclePageIndicator
+            android:id="@+id/movie_deatil_ci"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:radius="@dimen/five_dp"
+            android:layout_below="@id/movie_deatil_vp"
+            android:padding="1dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/movie_deatil_title_txt_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_deatil_pager_rl"
+        android:textSize="@dimen/text_sixteen_sp"
+        android:textColor="@android:color/black"
+        android:text="@string/movie_title"/>
+    <TextView
+        android:id="@+id/movie_deatil_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_deatil_title_txt_tv"
+        android:textSize="@dimen/text_fourteen_sp"
+        android:textColor="@color/colorAccent" />
+    <TextView
+        android:id="@+id/movie_deatil_description_txt_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_deatil_title_tv"
+        android:textSize="@dimen/text_sixteen_sp"
+        android:textColor="@android:color/black"
+        android:text="@string/movie_overview"/>
+    <TextView
+        android:id="@+id/movie_detail_descreption_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movie_deatil_description_txt_tv"
+        android:textSize="@dimen/text_fourteen_sp"
+        android:textColor="@color/colorAccent"
+        android:maxLines="5"
+        android:ellipsize="end"/>
+    <TextView
+        android:id="@+id/movie_detail_rating_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_detail_descreption_tv"
+        android:textSize="@dimen/text_sixteen_sp"
+        android:textColor="@android:color/black"
+        android:text="@string/movie_rating"/>
+    <RatingBar
+        android:id="@+id/movie_detail_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_detail_rating_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:minHeight="30dp"
+        android:numStars="10"
+        android:isIndicator="true"
+        style="@style/customRatingBar"
+        android:progressDrawable="@drawable/rating"
+        android:stepSize="0.1" />
+
+</RelativeLayout>
+</ScrollView>

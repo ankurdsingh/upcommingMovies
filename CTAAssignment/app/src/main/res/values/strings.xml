@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Upcoming Movies</string>
+    <string name="action_info">Information</string>
+    <string name="loading">Loading&#8230;</string>
+
+    <!--Network Connection Error Message-->
+    <string name="connection_slow">Connection is too slow !</string>
+    <string name="connection_fail">Oops Something went wrong!</string>
+
+    <!--upcomming movie activity-->
+    <string name="release_date">Releasing on\n</string>
+    <string name="maturity">Maturity\n</string>
+    <string name="adult">Adult</string>
+    <string name="everyone">Everyone</string>
+
+    <!--information activity-->
+    <string name="title_information_activity">Information</string>
+    <string name="developed_by">Developed by\nAnkur dayal singh</string>
+    <!--api key-->
+    <string name="api_key" translatable="false">b7cd3340a794e5a2f35e3abb820b497f</string>
+    <string name="title_activity_movie_detail">MovieDetail</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_overview">Movie Overview</string>
+    <string name="movie_rating">Average Rating</string>
+</resources>
